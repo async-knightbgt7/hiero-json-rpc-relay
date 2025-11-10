@@ -23,7 +23,7 @@ jobs:
       contents: write
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
         with:
           egress-policy: audit
 
@@ -67,7 +67,7 @@ jobs:
 
       - name: Dump relay logs
         if: ${{ always() && !cancelled() }}
-        uses: step-security/gh-docker-logs@fabd93e8cf0be430ca117408e07af71b2993caac # v2.2.5
+        uses: step-security/gh-docker-logs@2ffe2e0e1da43c5db68902dd900c47cdba10bfe6 # v2.2.6
         with:
           dest: './logs'
 
